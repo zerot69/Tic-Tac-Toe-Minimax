@@ -4,11 +4,10 @@ Tic-tac-toe in Python with Minimax Algorithm - Author: [@zerot69](http://github.
 ![image](https://user-images.githubusercontent.com/55183414/217699771-f61c3f78-e8da-4cb9-ada4-6cd7cb504bcd.png)
 
 ## Tic-tac-toe game coding
-I used a 2D array `gameArray[][]` with the size of 3x3 to store the state of the game.
-Computer will be 1 and player will be -1. `check_winning_computer()` will return True when the sum of any winning line equals to 3 (and -3 for `check_winning_player()`).
+The game state is stored in a 2D array `gameArray[][]` with the size of 3x3. The computer will be assigned as 1, and the player as -1. The `check_winning_computer()` function returns True when the sum of any winning line equals to 3, while the `check_winning_player()` function returns True when the sum of any winning line equals to -3.
 
-Computer will move first, `compMove = int(best_move())` *(see below)* and registers as `gameArray[compMove // 3][compMove % 3] = 1`.
-Player can type a number between 1 to 9 to input their move `userMove`. This will register to the board as `gameArray[userMove // 3][userMove % 3] = -1`.
+The computer moves first and selects the best move using `compMove = int(best_move())` *(see below)*, and then registers the move in `gameArray[compMove // 3][compMove % 3] = 1`. The player can input their move by typing a number between 1 to 9, which is then registered on the board as `gameArray[userMove // 3][userMove % 3] = -1`.
+
 
 ## Minimax Algorithm: minimax() function
 ```
